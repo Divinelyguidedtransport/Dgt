@@ -1,187 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Divinely Guided Transport</title>
-  <style>
-    :root{--brand:#0a66ff;--ink:#111;--muted:#667085;--bg:#f6f8fb;--card:#fff;--ring:#e6ebf2}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Inter,Arial,sans-serif;background:var(--bg);color:#1f2937}
-    a{color:var(--brand);text-decoration:none}
-    /* top nav */
-    header{background:#fff;border-bottom:1px solid #eef2f6}
-    .nav{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-    .nav h1{margin:0;font-size:16px;color:#111}
-    .nav small{display:block;color:#6b7280}
-    .nav a{margin-left:18px;color:#374151;font-weight:600}
-    .nav a:hover{color:var(--brand)}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Divinely Guided Transport</title>
+<style>
+  :root{
+    --brand:#0a66ff; --ink:#0b1324; --muted:#667085;
+    --bg:#f6f8fb; --ring:#e6ebf2; --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:#1f2937;
+       font:16px/1.45 -apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Arial,sans-serif;}
 
-    /* hero */
-    .hero{background:linear-gradient(180deg,#eaf2ff 0%, #f6f8fb 70%);padding:56px 20px 64px}
-    .hero-inner{max-width:1120px;margin:0 auto}
-    .hero h2{margin:0 0 10px;font-size:42px;line-height:1.15;letter-spacing:-.02em;color:#0b1324;font-weight:800}
-    .hero h2 .blue{color:var(--brand)}
-    .hero p{margin:6px 0 22px;color:#475569;max-width:720px}
-    .btn{display:inline-block;border:1px solid transparent;background:var(--brand);color:#fff;font-weight:800;
-         padding:12px 18px;border-radius:10px;box-shadow:0 2px 0 rgba(0,0,0,.04);margin-right:10px}
-    .btn.secondary{background:#111827;color:#fff}
-    .paynote{margin-top:12px;font-size:14px;color:#475569}
+  /* NAV */
+  header{background:#fff;border-bottom:1px solid var(--ring)}
+  .nav{max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+  .brand{margin:0;font-size:16px;color:#111}
+  .brand small{display:block;color:#6b7280}
+  .nav a{margin-left:18px;color:#374151;font-weight:600;text-decoration:none}
+  .nav a:hover{color:var(--brand)}
 
-    /* three-step strip */
-    .strip-wrap{max-width:1020px;margin:-32px auto 26px;padding:0 20px}
-    .strip{background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:0 8px 24px rgba(2,6,23,.06);
-           display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px}
-    .strip .item{padding:6px 10px;text-align:center}
-    .strip h3{margin:0 0 6px;font-size:15px;color:var(--brand)}
-    .strip p{margin:0;font-size:14px;color:#475569}
+  /* HERO with floating card on the right */
+  .hero{background:linear-gradient(180deg,#eaf2ff 0%,#f6f8fb 70%);padding:56px 20px 52px}
+  .hero-wrap{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+  .title{margin:0 0 10px;font-size:44px;line-height:1.12;letter-spacing:-.02em;color:var(--ink);font-weight:800}
+  .title .blue{color:var(--brand)}
+  .sub{margin:6px 0 22px;color:#475569;max-width:680px}
+  .cta{display:flex;gap:12px;margin-bottom:10px}
+  .btn{display:inline-block;background:var(--brand);color:#fff;border:1px solid transparent;border-radius:10px;
+       padding:12px 18px;font-weight:800;text-decoration:none}
+  .btn.secondary{background:#111827}
+  .paynote{font-size:14px;color:#475569}
 
-    /* sections */
-    .section{max-width:1020px;margin:0 auto;padding:26px 20px}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .card{background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:0 4px 12px rgba(2,6,23,.05);padding:18px}
-    .price{font-size:22px;font-weight:900;color:#0b1324}
-    .muted{color:var(--muted)}
-    /* booking iframe */
-    .iframe-wrap{position:relative;width:100%;padding-top:62%;background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:0 4px 12px rgba(2,6,23,.05);overflow:hidden}
-    .iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  /* RIGHT INFO CARD */
+  .sidecard{background:#fff;border:1px solid var(--ring);border-radius:18px;
+            box-shadow:0 10px 28px rgba(2,6,23,.10);padding:18px 18px 14px}
+  .steps{list-style:none;margin:0 0 14px;padding:0}
+  .steps li{display:flex;align-items:flex-start;gap:10px;margin:8px 0;color:#344054}
+  .num{flex:0 0 26px;height:26px;border-radius:50%;background:#e9f0ff;color:#0a66ff;
+       display:inline-grid;place-items:center;font-weight:800;font-size:13px}
+  .badgebar{display:flex;gap:12px;flex-wrap:wrap}
+  .badge{border:1px solid var(--ring);border-radius:12px;padding:10px 12px;background:#fff;color:#1f2937;
+         box-shadow:0 1px 0 rgba(2,6,23,.04);font-size:14px}
+  .badge small{display:block;color:#667085;font-weight:600}
 
-    footer{text-align:center;background:#0b1324;color:#fff;padding:28px;margin-top:38px}
-    @media (max-width:640px){
-      .hero h2{font-size:32px}
-      .strip{grid-template-columns:1fr}
-      .strip-wrap{margin:-22px auto 18px}
-    }
-  </style>
+  /* sections */
+  .section{max-width:1120px;margin:0 auto;padding:28px 20px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:0 4px 12px rgba(2,6,23,.05);padding:18px}
+  .price{font-size:22px;font-weight:900;color:var(--ink)}
+  .muted{color:var(--muted)}
+
+  /* booking iframe */
+  .iframe-wrap{position:relative;width:100%;padding-top:62%;background:#fff;border:1px solid var(--ring);
+               border-radius:14px;box-shadow:0 4px 12px rgba(2,6,23,.05);overflow:hidden}
+  .iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  footer{text-align:center;background:#0b1324;color:#fff;padding:28px;margin-top:38px}
+
+  @media (max-width:900px){
+    .hero-wrap{grid-template-columns:1fr}
+    .title{font-size:34px}
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <div class="nav">
-      <h1>Divinely Guided Transport <small>Pet & small-freight transport</small></h1>
-      <nav>
-        <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#book">Book</a>
-        <a href="#pay">Pay</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="nav">
+    <h1 class="brand">Divinely Guided Transport <small>Pet & small-freight transport</small></h1>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#book">Book</a>
+      <a href="#pay">Pay</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <h2>Book trusted pet transport & <span class="blue">pay online</span> in minutes.</h2>
-      <p>Nationwide, door-to-door trips. Clear pricing, live updates, and flexible pickup windows.</p>
-      <a class="btn" href="#book">Book a trip</a>
-      <a class="btn secondary" href="#pay">Pay / Deposit</a>
+<section class="hero">
+  <div class="hero-wrap">
+    <!-- LEFT hero text -->
+    <div>
+      <h2 class="title">Book trusted pet transport & <span class="blue">pay online</span> in minutes.</h2>
+      <p class="sub">Nationwide, door-to-door trips. Clear pricing, live updates, and flexible pickup windows.</p>
+      <div class="cta">
+        <a class="btn" href="#book">Book a trip</a>
+        <a class="btn secondary" href="#pay">Pay / Deposit</a>
+      </div>
       <div class="paynote">Pay via PayPal (cards accepted). Cash App / Venmo / Chime also available.</div>
     </div>
-  </section>
 
-  <!-- 3-step strip sitting on the edge of the hero -->
-  <div class="strip-wrap">
-    <div class="strip">
-      <div class="item">
-        <h3>1. Request</h3>
-        <p>Pickup window and drop-off address.</p>
+    <!-- RIGHT floating info card (like your original) -->
+    <aside class="sidecard">
+      <ol class="steps">
+        <li><span class="num">1</span><div><strong>Request</strong> a pickup window and drop-off address.</div></li>
+        <li><span class="num">2</span><div><strong>Confirm price</strong> and pay a small deposit.</div></li>
+        <li><span class="num">3</span><div><strong>We drive</strong> with frequent updates, water breaks, and care stops.</div></li>
+      </ol>
+      <div class="badgebar">
+        <div class="badge"><strong>Licensed & insured</strong><br><small>Proof on request.</small></div>
+        <div class="badge"><strong>Nationwide</strong><br><small>Lower 48 U.S.</small></div>
       </div>
-      <div class="item">
-        <h3>2. Confirm</h3>
-        <p>Get a price and pay a small deposit.</p>
-      </div>
-      <div class="item">
-        <h3>3. Drive</h3>
-        <p>Frequent updates — water breaks, GPS, and care.</p>
-      </div>
-    </div>
+    </aside>
   </div>
+</section>
 
-  <!-- How it works (cards) -->
-  <section id="how" class="section">
-    <div class="cards">
-      <div class="card"><h3>Step 1</h3><p>Tell us your route — pickup, drop-off, dates, and pet details. We confirm availability fast.</p></div>
-      <div class="card"><h3>Step 2</h3><p>Book your slot — choose a pickup window that fits. We share driver ETA and updates.</p></div>
-      <div class="card"><h3>Step 3</h3><p>Pay securely — deposit online by card, Cash App, or Venmo. Balance due on delivery.</p></div>
-    </div>
-  </section>
+<!-- How it works -->
+<section id="how" class="section">
+  <h2>How it works</h2>
+  <div class="cards">
+    <div class="card"><h3>Step 1</h3><p>Tell us your route — pickup, drop-off, dates, and pet details. We confirm availability fast.</p></div>
+    <div class="card"><h3>Step 2</h3><p>Book your slot — choose a pickup window that fits. We share driver ETA and updates.</p></div>
+    <div class="card"><h3>Step 3</h3><p>Pay securely — deposit online by card, Cash App, or Venmo. Balance due on delivery.</p></div>
+  </div>
+</section>
 
-  <!-- Pricing -->
-  <section id="pricing" class="section">
-    <h2>Transparent pricing</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Shared / Multi-pet</h3>
-        <div class="price">$0.75 <small>/mile</small></div>
-        <p class="muted">Best value when your pet can share a route.</p>
-      </div>
-      <div class="card">
-        <h3>Solo / VIP</h3>
-        <div class="price">$1.25 <small>/mile</small></div>
-        <p class="muted">Direct route with no additional animals onboard.</p>
-      </div>
-      <div class="card">
-        <h3>Deposit</h3>
-        <div class="price">50% <small>up front</small></div>
-        <p class="muted">Balance due at drop-off. Cards accepted.</p>
-      </div>
-    </div>
-    <p class="muted" style="margin-top:10px">Final quote depends on exact mileage, wait time, tolls, and special handling.</p>
-  </section>
+<!-- Pricing -->
+<section id="pricing" class="section">
+  <h2>Transparent pricing</h2>
+  <div class="cards">
+    <div class="card"><h3>Shared / Multi-pet</h3><div class="price">$0.75 <small>/mile</small></div><p class="muted">Best value when your pet can share a route.</p></div>
+    <div class="card"><h3>Solo / VIP</h3><div class="price">$1.25 <small>/mile</small></div><p class="muted">Direct route with no additional animals onboard.</p></div>
+    <div class="card"><h3>Deposit</h3><div class="price">50% <small>up front</small></div><p class="muted">Balance due at drop-off. Cards accepted.</p></div>
+  </div>
+  <p class="muted" style="margin-top:10px">Final quote depends on exact mileage, wait time, tolls, and special handling.</p>
+</section>
 
-  <!-- Booking (Square) -->
-  <section id="book" class="section">
-    <h2>Book your pickup window</h2>
-    <p class="muted">Choose a time and share trip details. You'll get confirmation by text/email.</p>
-    <div class="iframe-wrap">
-      <!-- replace with your Square Appointments widget URL -->
-      <iframe src="SQUARE_WIDGET_URL" title="Book with Divinely Guided Transport — Powered by Square"></iframe>
-    </div>
-    <p class="muted" style="text-align:center;margin-top:8px">Powered by Square</p>
-  </section>
+<!-- Booking (Square) -->
+<section id="book" class="section">
+  <h2>Book your pickup window</h2>
+  <p class="muted">Choose a time and share trip details. You'll get confirmation by text/email.</p>
+  <div class="iframe-wrap">
+    <!-- replace with your Square Appointments widget URL -->
+    <iframe src="SQUARE_WIDGET_URL" title="Book with Divinely Guided Transport — Powered by Square"></iframe>
+  </div>
+  <p class="muted" style="text-align:center;margin-top:8px">Powered by Square</p>
+</section>
 
-  <!-- Pay -->
-  <section id="pay" class="section">
-    <h2>Pay deposit or balance</h2>
-    <p class="muted">Pay securely online via PayPal. You can use a debit/credit card without a PayPal account.</p>
-    <div class="card" style="text-align:center">
-      <h3>Pay with PayPal</h3>
-      <p class="muted">Click below to open our PayPal.Me page. Enter your 50% deposit or full balance.</p>
-      <a class="btn" href="https://paypal.me/YourHandle" target="_blank" rel="noopener">Open PayPal payment page</a>
-      <p class="muted">Tip: append an amount (e.g. <code>/250</code>) to prefill.</p>
-    </div>
-    <div class="cards" style="margin-top:16px">
-      <div class="card"><strong>Cash App</strong><br><span class="muted">$YourCashtag</span></div>
-      <div class="card"><strong>Venmo</strong><br><span class="muted">@YourVenmo</span></div>
-      <div class="card"><strong>Chime / Zelle</strong><br><span class="muted">you@example.com</span></div>
-    </div>
-  </section>
+<!-- Pay -->
+<section id="pay" class="section">
+  <h2>Pay deposit or balance</h2>
+  <p class="muted">Pay securely online via PayPal. You can use a debit/credit card without a PayPal account.</p>
+  <div class="card" style="text-align:center">
+    <h3>Pay with PayPal</h3>
+    <p class="muted">Click below to open our PayPal.Me page. Enter your 50% deposit or full balance.</p>
+    <a class="btn" href="https://paypal.me/YourHandle" target="_blank" rel="noopener">Open PayPal payment page</a>
+    <p class="muted">Tip: append an amount (e.g. <code>/250</code>) to prefill.</p>
+  </div>
+  <div class="cards" style="margin-top:16px">
+    <div class="card"><strong>Cash App</strong><br><span class="muted">$YourCashtag</span></div>
+    <div class="card"><strong>Venmo</strong><br><span class="muted">@YourVenmo</span></div>
+    <div class="card"><strong>Chime / Zelle</strong><br><span class="muted">you@example.com</span></div>
+  </div>
+</section>
 
-  <!-- FAQ -->
-  <section id="faq" class="section">
-    <h2>FAQ</h2>
-    <div class="cards">
-      <div class="card"><h3>What areas do you cover?</h3><p class="muted">Nationwide in the lower 48 states. Inquire for special routes.</p></div>
-      <div class="card"><h3>What's included in the price?</h3><p class="muted">Mileage, normal rest stops, water breaks. Tolls or special handling may be added.</p></div>
-      <div class="card"><h3>Refunds & rescheduling</h3><p class="muted">Deposits are transferable with 48+ hours notice. No-shows may forfeit deposit.</p></div>
-      <div class="card"><h3>Insurance & credentials</h3><p class="muted">Proof of insurance and USDA/APHIS compliance available on request.</p></div>
-    </div>
-  </section>
+<!-- FAQ -->
+<section id="faq" class="section">
+  <h2>FAQ</h2>
+  <div class="cards">
+    <div class="card"><h3>What areas do you cover?</h3><p class="muted">Nationwide in the lower 48 states. Inquire for special routes.</p></div>
+    <div class="card"><h3>What's included in the price?</h3><p class="muted">Mileage, normal rest stops, water breaks. Tolls or special handling may be added.</p></div>
+    <div class="card"><h3>Refunds & rescheduling</h3><p class="muted">Deposits are transferable with 48+ hours notice. No-shows may forfeit deposit.</p></div>
+    <div class="card"><h3>Insurance & credentials</h3><p class="muted">Proof of insurance and USDA/APHIS compliance available on request.</p></div>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <div class="cards">
-      <div class="card"><strong>Text / Call</strong><br><a href="tel:+12403809239">(240) 380-9239</a></div>
-      <div class="card"><strong>Email</strong><br><a href="mailto:divinelyguidedtransport@gmail.com">divinelyguidedtransport@gmail.com</a></div>
-      <div class="card"><strong>Social</strong><br><span class="muted">Instagram / Facebook: @DivinelyGT</span></div>
-    </div>
-  </section>
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="cards">
+    <div class="card"><strong>Text / Call</strong><br><a href="tel:+12403809239">(240) 380-9239</a></div>
+    <div class="card"><strong>Email</strong><br><a href="mailto:divinelyguidedtransport@gmail.com">divinelyguidedtransport@gmail.com</a></div>
+    <div class="card"><strong>Social</strong><br><span class="muted">Instagram / Facebook: @DivinelyGT</span></div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 Divinely Guided Transport LLC — Licensed & Insured — Nationwide
-  </footer>
+<footer>
+  &copy; 2025 Divinely Guided Transport LLC — Licensed & Insured — Nationwide
+</footer>
 
 </body>
 </html>
