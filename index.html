@@ -4,10 +4,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-  body {
+  /* Only make elements with the 'cursive' class use Great Vibes */
+  .cursive {
     font-family: 'Great Vibes', cursive;
-    font-size: 18px;   /* makes small text more readable */
-    line-height: 1.6;  /* adds spacing for clarity */
+  }
+
+  /* Keep the body clean and readable */
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
   }
 </style>
 
@@ -15,14 +21,18 @@
 <div class="text-center bg-gray-100 p-2">
   📞 <a href="tel:+12403809239">(240) 380-9239</a> |
   💬 <a href="sms:+12403809239">Text Us</a>
-</div>
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
-   <div class="text-center py-10">
+<div class="text-center py-10">
   <img src="IMG_20250901_034524.jpg" alt="Divinely Guided Transport Logo"
-     class="mx-auto mb-6 w-48 md:w-64">
-  <h1 class="text-3xl font-bold">Book trusted pet transport & pay online in minutes.</h1>
-   </div>
+       class="mx-auto mb-6 w-48 md:w-64">
+
+  <h1 class="text-4xl md:text-6xl font-bold cursive">
+    Divinely Guided Transport
+  </h1>
+
+  <p class="mt-4 text-lg">
+    Book trusted pet transport &amp; pay online in minutes.
+  </p>
+</div>
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-sky-100">
