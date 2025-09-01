@@ -1,71 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divinely Guided Transport — Book & Pay</title>
-  <meta name="description" content="Book safe, reliable pet and small-freight transport.">
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divinely Guided Transport LLC</title>
   <style>
     body {
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-      font-size: 16px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+      color: #333;
       line-height: 1.6;
+    }
+    header {
+      background: #3e5e4f;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background: #2c4035;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2c4035;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #3e5e4f;
+      color: white;
+      margin-top: 2rem;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    .pricing-table th {
+      background-color: #eaeaea;
+    }
+    .payment-icons img {
+      width: 50px;
+      margin: 5px;
     }
   </style>
 </head>
+<body>
 
-<body class="bg-slate-50 text-slate-800">
-
-  <!-- Logo at the very top -->
-  <div class="text-center py-6">
-    <img src="IMG_20250901_034524.jpg" alt="Divinely Guided Transport Logo"
-         class="mx-auto w-48 md:w-64">
-  </div>
-
-  <!-- Contact bar -->
-  <div class="text-center bg-gray-100 p-2">
-    ☎ <a href="tel:+12403809239" class="text-blue-600 hover:underline">(240) 380-9239</a> |
-    💬 <a href="sms:+12403809239" class="text-blue-600 hover:underline">Text Us</a>
-  </div>
-
-  <!-- Main content -->
-  <header class="text-center py-10">
-    <h1 class="text-4xl md:text-6xl font-bold">
-      Book trusted pet transport &amp; <span class="text-blue-600">pay online</span> in minutes.
-    </h1>
-    <p class="mt-4 text-lg">
-      Nationwide, door-to-door trips. Clear pricing, live updates, and flexible pickup windows.
-    </p>
-    <p class="mt-2 text-lg font-semibold text-gray-700">
-      🌍 International trips also available — must meet at the airport.
-    </p>
-
-    <!-- Buttons -->
-    <div class="mt-6 flex justify-center space-x-4">
-      <a href="#book" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">
-        Book a trip
-      </a>
-      <a href="#deposit" class="px-6 py-3 bg-white border border-gray-300 rounded-lg hover:bg-gray-100">
-        Pay / Deposit
-      </a>
-    </div>
-
-    <!-- Payment note -->
-    <p class="mt-6 text-sm text-gray-600">
-      Pay via PayPal (cards accepted):  
-      <a href="mailto:divinelyguidedtransport@gmail.com" class="text-blue-600 hover:underline">
-        divinelyguidedtransport@gmail.com
-      </a>
-      <br>
-      Venmo: <a href="https://venmo.com/DivinelyGT" target="_blank" class="text-blue-600 hover:underline">@DivinelyGT</a> · 
-      Cash App: <a href="https://cash.app/$DivinelyGT" target="_blank" class="text-blue-600 hover:underline">$DivinelyGT</a> · 
-      Chime: <span class="font-semibold">DivinelyGT</span>
-    </p>
+  <header>
+    <h1>Divinely Guided Transport LLC</h1>
+    <p>Nationwide Pet & Package Transport — Safe, Reliable, Compassionate</p>
   </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#payments">Payments</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about" class="card">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>Divinely Guided Transport LLC</strong>, where every journey is handled with compassion, care, 
+        and professionalism. Our mission is to provide stress-free transportation for pets and packages across the United States, 
+        while keeping safety, love, and trust at the heart of every trip. Whether you’re relocating, adopting a new furry family 
+        member, or sending precious cargo, we treat each delivery with the same care we would for our own.
+      </p>
+    </section>
+
+    <section id="services" class="card">
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Pet Transportation</strong> – State-to-state, door-to-door transport in a clean, safe vehicle environment.</li>
+        <li><strong>Multi-Pet or Solo Rides</strong> – Choose group trips for affordability or private trips for undivided attention.</li>
+        <li><strong>Package & Specialty Item Delivery</strong> – Secure and prompt delivery for valued items.</li>
+        <li><strong>Flexible Scheduling</strong> – We work around your timeline for convenience and peace of mind.</li>
+      </ul>
+    </section>
+
+    <section id="pricing" class="card">
+      <h2>Pricing</h2>
+      <table class="pricing-table">
+        <tr>
+          <th>Service</th>
+          <th>Rate</th>
+        </tr>
+        <tr>
+          <td>Multi-Pet Transport</td>
+          <td>$0.75 per mile</td>
+        </tr>
+        <tr>
+          <td>Solo Transport</td>
+          <td>$1.25 per mile</td>
+        </tr>
+      </table>
+      <p>
+        A <strong>50% deposit</strong> is required upfront to secure your booking, with the balance due upon safe delivery.
+      </p>
+    </section>
+
+    <section id="payments" class="card">
+      <h2>Payment Options</h2>
+      <p>We offer multiple convenient ways to pay:</p>
+      <div class="payment-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Venmo_Logo.png" alt="Venmo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Cash_App_Logo.png" alt="Cash App">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Chime_logo.svg" alt="Chime">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/OneFinance_logo.png" alt="One">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Square%2C_Inc._logo.svg" alt="Square">
+      </div>
+      <p>
+        Preferred: <strong>Venmo</strong> or <strong>Cash App</strong> (no processing fees).  
+        Credit cards accepted via <strong>Square</strong>. Financial assistance plans available upon request with a card on file.
+      </p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact Us</h2>
+      <p>
+        📞 Call or Text: <strong>(Your Number Here)</strong><br>
+        ✉️ Email: <strong>(Your Email Here)</strong><br>
+        📍 Based in: United States – Nationwide Transport Available
+      </p>
+      <p>
+        We’d love to help guide your journey. Reach out today for a personalized quote.
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Divinely Guided Transport LLC. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
