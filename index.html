@@ -5,52 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Divinely Guided Transport</title>
   <style>
-    :root{--brand:#0070f3;--ink:#111;--muted:#555;--bg:#f8fafc;--card:#fff}
+    :root{--brand:#0a66ff;--ink:#111;--muted:#667085;--bg:#f6f8fb;--card:#fff;--ring:#e6ebf2}
     *{box-sizing:border-box}
-    body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg);color:#222}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Inter,Arial,sans-serif;background:var(--bg);color:#1f2937}
     a{color:var(--brand);text-decoration:none}
-    header{background:#fff;border-bottom:1px solid #e5e7eb}
-    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem}
-    .nav h1{font-size:1.1rem;margin:0;color:var(--ink)}
-    .nav small{display:block;color:#666}
-    .nav a{margin-left:18px;color:#333;font-weight:500}
+    /* top nav */
+    header{background:#fff;border-bottom:1px solid #eef2f6}
+    .nav{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .nav h1{margin:0;font-size:16px;color:#111}
+    .nav small{display:block;color:#6b7280}
+    .nav a{margin-left:18px;color:#374151;font-weight:600}
     .nav a:hover{color:var(--brand)}
 
-    /* top logo + contact strip */
-    .brandbar{max-width:1100px;margin:0 auto;padding:1.25rem 1.25rem 0;text-align:center}
-    .brandbar img{max-width:220px;height:auto;border-radius:8px}
-    .contactline{margin:.6rem 0 1.25rem;color:#2e6fd6;font-weight:600}
-    .contactline a{margin:0 .35rem}
-
     /* hero */
-    .hero{background:#eef4fb;padding:2.5rem 1.25rem 2rem}
-    .hero-inner{max-width:1100px;margin:0 auto}
-    .hero h2{font-size:2.1rem;line-height:1.2;margin:0 0 .75rem;color:var(--ink);font-weight:800}
+    .hero{background:linear-gradient(180deg,#eaf2ff 0%, #f6f8fb 70%);padding:56px 20px 64px}
+    .hero-inner{max-width:1120px;margin:0 auto}
+    .hero h2{margin:0 0 10px;font-size:42px;line-height:1.15;letter-spacing:-.02em;color:#0b1324;font-weight:800}
     .hero h2 .blue{color:var(--brand)}
-    .hero p{max-width:720px;color:#444;margin:.25rem 0 1.25rem}
-    .intl{display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem}
-    .dot{width:10px;height:10px;border-radius:50%;background:#16a34a;display:inline-block}
-    .btn{display:inline-block;background:var(--brand);color:#fff;padding:.85rem 1.25rem;border-radius:8px;font-weight:700;margin-right:.6rem}
-    .btn.secondary{background:#e5e7eb;color:#111}
-    .payline{margin-top:1rem;color:#2e6fd6}
-    .payline span{color:#444}
+    .hero p{margin:6px 0 22px;color:#475569;max-width:720px}
+    .btn{display:inline-block;border:1px solid transparent;background:var(--brand);color:#fff;font-weight:800;
+         padding:12px 18px;border-radius:10px;box-shadow:0 2px 0 rgba(0,0,0,.04);margin-right:10px}
+    .btn.secondary{background:#111827;color:#fff}
+    .paynote{margin-top:12px;font-size:14px;color:#475569}
 
-    /* info blocks */
-    .features{max-width:1000px;margin:-1.25rem auto 1.5rem;background:var(--card);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:1.25rem;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-    .features h3{color:var(--brand);margin:.25rem 0 .35rem;font-size:1rem}
-    .muted{color:var(--muted);font-size:.95rem}
+    /* three-step strip */
+    .strip-wrap{max-width:1020px;margin:-32px auto 26px;padding:0 20px}
+    .strip{background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:0 8px 24px rgba(2,6,23,.06);
+           display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px}
+    .strip .item{padding:6px 10px;text-align:center}
+    .strip h3{margin:0 0 6px;font-size:15px;color:var(--brand)}
+    .strip p{margin:0;font-size:14px;color:#475569}
 
-    .section{max-width:1000px;margin:0 auto;padding:1.75rem 1.25rem}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
-    .card{background:#fff;padding:1.25rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-    .price{font-size:1.35rem;font-weight:800}
-
-    /* booking embed */
-    .iframe-wrap{position:relative;width:100%;padding-top:62.5%;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.05);overflow:hidden}
+    /* sections */
+    .section{max-width:1020px;margin:0 auto;padding:26px 20px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:0 4px 12px rgba(2,6,23,.05);padding:18px}
+    .price{font-size:22px;font-weight:900;color:#0b1324}
+    .muted{color:var(--muted)}
+    /* booking iframe */
+    .iframe-wrap{position:relative;width:100%;padding-top:62%;background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:0 4px 12px rgba(2,6,23,.05);overflow:hidden}
     .iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
-    footer{text-align:center;background:#111;color:#fff;padding:2rem;margin-top:2rem}
-    @media (max-width:640px){.hero h2{font-size:1.75rem}}
+    footer{text-align:center;background:#0b1324;color:#fff;padding:28px;margin-top:38px}
+    @media (max-width:640px){
+      .hero h2{font-size:32px}
+      .strip{grid-template-columns:1fr}
+      .strip-wrap{margin:-22px auto 18px}
+    }
   </style>
 </head>
 <body>
@@ -67,55 +68,37 @@
         <a href="#contact">Contact</a>
       </nav>
     </div>
-
-    <!-- centered logo and contact line like your screenshot -->
-    <div class="brandbar">
-      <!-- swap src for your actual logo file/url -->
-      <img src="logo.png" alt="Divinely Guided Transport logo">
-      <div class="contactline">
-        <a href="tel:+12403809239">(240) 380-9239</a> | 
-        <a href="sms:+12403809239">Text Us</a>
-      </div>
-    </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
       <h2>Book trusted pet transport & <span class="blue">pay online</span> in minutes.</h2>
       <p>Nationwide, door-to-door trips. Clear pricing, live updates, and flexible pickup windows.</p>
-      <div class="intl"><span class="dot"></span><div>International trips also available — <strong>must meet at the airport.</strong></div></div>
-
       <a class="btn" href="#book">Book a trip</a>
       <a class="btn secondary" href="#pay">Pay / Deposit</a>
+      <div class="paynote">Pay via PayPal (cards accepted). Cash App / Venmo / Chime also available.</div>
+    </div>
+  </section>
 
-      <!-- payment handles directly under buttons -->
-      <div class="payline">
-        Pay via <strong>PayPal</strong> (cards accepted): <a href="mailto:divinelyguidedtransport@gmail.com">divinelyguidedtransport@gmail.com</a>
-        <span> · Venmo: <a href="https://venmo.com/u/DivinelyGT" target="_blank">@DivinelyGT</a>
-        · Cash App: <a href="https://cash.app/$DivinelyGT" target="_blank">$DivinelyGT</a>
-        · Chime: <strong>DivinelyGT</strong></span>
+  <!-- 3-step strip sitting on the edge of the hero -->
+  <div class="strip-wrap">
+    <div class="strip">
+      <div class="item">
+        <h3>1. Request</h3>
+        <p>Pickup window and drop-off address.</p>
+      </div>
+      <div class="item">
+        <h3>2. Confirm</h3>
+        <p>Get a price and pay a small deposit.</p>
+      </div>
+      <div class="item">
+        <h3>3. Drive</h3>
+        <p>Frequent updates — water breaks, GPS, and care.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- 1–2–3 row -->
-  <section class="features">
-    <div>
-      <h3>1. Request</h3>
-      <p class="muted">Pickup window and drop-off address.</p>
-    </div>
-    <div>
-      <h3>2. Confirm</h3>
-      <p class="muted">Get a price and pay a small deposit.</p>
-    </div>
-    <div>
-      <h3>3. Drive</h3>
-      <p class="muted">Frequent updates — water breaks, GPS, and care.</p>
-    </div>
-  </section>
-
-  <!-- How it works -->
+  <!-- How it works (cards) -->
   <section id="how" class="section">
     <div class="cards">
       <div class="card"><h3>Step 1</h3><p>Tell us your route — pickup, drop-off, dates, and pet details. We confirm availability fast.</p></div>
@@ -128,11 +111,23 @@
   <section id="pricing" class="section">
     <h2>Transparent pricing</h2>
     <div class="cards">
-      <div class="card"><h3>Shared / Multi-pet</h3><div class="price">$0.75 <small>/mile</small></div><p class="muted">Best value when your pet can share a route.</p></div>
-      <div class="card"><h3>Solo / VIP</h3><div class="price">$1.25 <small>/mile</small></div><p class="muted">Direct route with no additional animals onboard.</p></div>
-      <div class="card"><h3>Deposit</h3><div class="price">50% <small>up front</small></div><p class="muted">Balance due at drop-off. Cards accepted.</p></div>
+      <div class="card">
+        <h3>Shared / Multi-pet</h3>
+        <div class="price">$0.75 <small>/mile</small></div>
+        <p class="muted">Best value when your pet can share a route.</p>
+      </div>
+      <div class="card">
+        <h3>Solo / VIP</h3>
+        <div class="price">$1.25 <small>/mile</small></div>
+        <p class="muted">Direct route with no additional animals onboard.</p>
+      </div>
+      <div class="card">
+        <h3>Deposit</h3>
+        <div class="price">50% <small>up front</small></div>
+        <p class="muted">Balance due at drop-off. Cards accepted.</p>
+      </div>
     </div>
-    <p class="muted" style="margin-top:.75rem">Final quote depends on exact mileage, wait time, tolls, and special handling.</p>
+    <p class="muted" style="margin-top:10px">Final quote depends on exact mileage, wait time, tolls, and special handling.</p>
   </section>
 
   <!-- Booking (Square) -->
@@ -140,15 +135,15 @@
     <h2>Book your pickup window</h2>
     <p class="muted">Choose a time and share trip details. You'll get confirmation by text/email.</p>
     <div class="iframe-wrap">
-      <!-- Replace SQUARE_WIDGET_URL with your Square Appointments widget URL -->
-      <iframe src="SQUARE_WIDGET_URL" title="Book with Divinely Guided Transport — Powered by Square" allowtransparency="true"></iframe>
+      <!-- replace with your Square Appointments widget URL -->
+      <iframe src="SQUARE_WIDGET_URL" title="Book with Divinely Guided Transport — Powered by Square"></iframe>
     </div>
-    <p class="muted" style="text-align:center;margin-top:.6rem">Powered by Square</p>
+    <p class="muted" style="text-align:center;margin-top:8px">Powered by Square</p>
   </section>
 
-  <!-- Pay / Deposit -->
-  <section id="pay" class="section" aria-labelledby="payhead">
-    <h2 id="payhead">Pay deposit or balance</h2>
+  <!-- Pay -->
+  <section id="pay" class="section">
+    <h2>Pay deposit or balance</h2>
     <p class="muted">Pay securely online via PayPal. You can use a debit/credit card without a PayPal account.</p>
     <div class="card" style="text-align:center">
       <h3>Pay with PayPal</h3>
@@ -156,10 +151,10 @@
       <a class="btn" href="https://paypal.me/YourHandle" target="_blank" rel="noopener">Open PayPal payment page</a>
       <p class="muted">Tip: append an amount (e.g. <code>/250</code>) to prefill.</p>
     </div>
-    <div class="cards" style="margin-top:1rem">
-      <div class="card"><strong>Cash App</strong><br><span class="muted">$DivinelyGT</span></div>
-      <div class="card"><strong>Venmo</strong><br><span class="muted">@DivinelyGT</span></div>
-      <div class="card"><strong>Chime / Zelle</strong><br><span class="muted">divinelyguidedtransport@gmail.com</span></div>
+    <div class="cards" style="margin-top:16px">
+      <div class="card"><strong>Cash App</strong><br><span class="muted">$YourCashtag</span></div>
+      <div class="card"><strong>Venmo</strong><br><span class="muted">@YourVenmo</span></div>
+      <div class="card"><strong>Chime / Zelle</strong><br><span class="muted">you@example.com</span></div>
     </div>
   </section>
 
@@ -188,7 +183,5 @@
     &copy; 2025 Divinely Guided Transport LLC — Licensed & Insured — Nationwide
   </footer>
 
-  <!-- anchor alias some people used -->
-  <div id="deposit" style="position:relative;top:-80px"></div>
 </body>
 </html>
