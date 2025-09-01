@@ -1,168 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divinely Guided Transport LLC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divinely Guided Transport</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f8f8f8;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #3e5e4f;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    nav {
-      background: #2c4035;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    .card {
-      background: white;
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #2c4035;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #3e5e4f;
-      color: white;
-      margin-top: 2rem;
-    }
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .pricing-table th, .pricing-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: center;
-    }
-    .pricing-table th {
-      background-color: #eaeaea;
-    }
-    .payment-icons img {
-      width: 50px;
-      margin: 5px;
-    }
+    :root { --brand:#0070f3; --bg:#f8fafc; --ink:#111; --muted:#555; }
+    *{box-sizing:border-box}
+    body{font-family:'Segoe UI',Tahoma,sans-serif;margin:0;background:var(--bg);color:#222}
+    header{background:#fff;border-bottom:1px solid #e5e7eb;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    header h1{font-size:1.2rem;margin:0;color:var(--ink)}
+    header small{display:block;font-size:.8rem;color:#666}
+    nav a{margin-left:20px;text-decoration:none;color:#333;font-weight:500}
+    nav a:hover{color:var(--brand)}
+    .hero{padding:4rem 2rem;background:#e8f1f9}
+    .hero h2{font-size:2rem;font-weight:700;margin:0 0 1rem;color:var(--ink)}
+    .hero h2 span{color:var(--brand)}
+    .hero p{max-width:640px;margin:0 0 1.5rem;color:#444}
+    .btn{background:var(--brand);border:none;padding:.85rem 1.4rem;font-weight:700;color:#fff;border-radius:8px;cursor:pointer;margin-right:.6rem;text-decoration:none;display:inline-block}
+    .btn.secondary{background:#4b5563}
+    .features{display:flex;justify-content:space-around;padding:2rem;background:#fff;border-radius:12px;margin:-2rem auto 2rem;max-width:1000px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+    .features>div{flex:1;margin:0 1rem;text-align:center}
+    .features h3{font-size:1rem;margin:.25rem 0 .5rem;color:var(--brand)}
+    .steps,.pricing,.pickup,.pay,.faq,.contact{max-width:1000px;margin:auto;padding:2rem}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+    .card{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+    .step h4{margin:.2rem 0 .6rem;color:var(--ink)}
+    .pricing h2{margin:0 0 1rem}
+    .pricing .price{font-size:1.35rem;font-weight:800;margin:.25rem 0}
+    .muted{color:var(--muted);font-size:.9rem}
+    .iframe-wrap{position:relative;width:100%;padding-top:62.5%;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.05);overflow:hidden}
+    .iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .faq .card h3{margin-top:0}
+    footer{text-align:center;padding:2rem;background:#111;color:#fff}
+    @media(max-width:640px){.hero{padding:2.5rem 1.25rem}.features{flex-direction:column;margin:1rem}}
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Divinely Guided Transport LLC</h1>
-    <p>Nationwide Pet & Package Transport — Safe, Reliable, Compassionate</p>
+    <h1>Divinely Guided Transport <small>Pet & small-freight transport</small></h1>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#book">Book</a>
+      <a href="#pay">Pay</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#payments">Payments</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Book trusted pet transport & <span>pay online</span> in minutes.</h2>
+    <p>Nationwide, door-to-door trips. Clear pricing, live updates, and flexible pickup windows.</p>
+    <a class="btn" href="#book">Book a trip</a>
+    <a class="btn secondary" href="#pay">Pay / Deposit</a>
+    <p class="muted" style="margin-top:1rem">Pay via PayPal (cards accepted). Cash App / Venmo / Chime also available.</p>
+  </section>
 
-  <div class="container">
+  <!-- Features -->
+  <section class="features">
+    <div><h3>1. Request</h3><p class="muted">Pickup window and drop-off address.</p></div>
+    <div><h3>2. Confirm</h3><p class="muted">Get a price and pay a small deposit.</p></div>
+    <div><h3>3. Drive</h3><p class="muted">Frequent updates — water breaks, GPS, and care.</p></div>
+  </section>
 
-    <section id="about" class="card">
-      <h2>About Us</h2>
-      <p>
-        Welcome to <strong>Divinely Guided Transport LLC</strong>, where every journey is handled with compassion, care, 
-        and professionalism. Our mission is to provide stress-free transportation for pets and packages across the United States, 
-        while keeping safety, love, and trust at the heart of every trip. Whether you’re relocating, adopting a new furry family 
-        member, or sending precious cargo, we treat each delivery with the same care we would for our own.
-      </p>
-    </section>
+  <!-- How it works -->
+  <section id="how" class="steps">
+    <div class="cards">
+      <div class="card step"><h4>Step 1</h4><p>Tell us your route — pickup, drop-off, dates, and pet details. We confirm availability fast.</p></div>
+      <div class="card step"><h4>Step 2</h4><p>Book your slot — choose a pickup window that fits. We share driver ETA and updates.</p></div>
+      <div class="card step"><h4>Step 3</h4><p>Pay securely — deposit online by card, Cash App, or Venmo. Balance due on delivery.</p></div>
+    </div>
+  </section>
 
-    <section id="services" class="card">
-      <h2>Our Services</h2>
-      <ul>
-        <li><strong>Pet Transportation</strong> – State-to-state, door-to-door transport in a clean, safe vehicle environment.</li>
-        <li><strong>Multi-Pet or Solo Rides</strong> – Choose group trips for affordability or private trips for undivided attention.</li>
-        <li><strong>Package & Specialty Item Delivery</strong> – Secure and prompt delivery for valued items.</li>
-        <li><strong>Flexible Scheduling</strong> – We work around your timeline for convenience and peace of mind.</li>
-      </ul>
-    </section>
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <h2>Transparent pricing</h2>
+    <div class="cards">
+      <div class="card"><h3>Shared / Multi-pet</h3><div class="price">$0.75 <small>/mile</small></div><p class="muted">Best value when your pet can share a route.</p></div>
+      <div class="card"><h3>Solo / VIP</h3><div class="price">$1.25 <small>/mile</small></div><p class="muted">Direct route with no additional animals onboard.</p></div>
+      <div class="card"><h3>Deposit</h3><div class="price">50% <small>up front</small></div><p class="muted">Balance due at drop-off. Cards accepted.</p></div>
+    </div>
+    <p class="muted" style="margin-top:1rem">Final quote depends on exact mileage, wait time, tolls, and special handling.</p>
+  </section>
 
-    <section id="pricing" class="card">
-      <h2>Pricing</h2>
-      <table class="pricing-table">
-        <tr>
-          <th>Service</th>
-          <th>Rate</th>
-        </tr>
-        <tr>
-          <td>Multi-Pet Transport</td>
-          <td>$0.75 per mile</td>
-        </tr>
-        <tr>
-          <td>Solo Transport</td>
-          <td>$1.25 per mile</td>
-        </tr>
-      </table>
-      <p>
-        A <strong>50% deposit</strong> is required upfront to secure your booking, with the balance due upon safe delivery.
-      </p>
-    </section>
+  <!-- Book -->
+  <section id="book" class="pickup">
+    <h2>Book your pickup window</h2>
+    <p class="muted">Choose a time and share trip details. You'll get confirmation by text/email.</p>
+    <div class="iframe-wrap">
+      <iframe src="SQUARE_WIDGET_URL" title="Book with Divinely Guided Transport — Powered by Square" allowtransparency="true"></iframe>
+    </div>
+    <p class="muted" style="text-align:center;margin-top:.75rem">Powered by Square</p>
+  </section>
 
-    <section id="payments" class="card">
-      <h2>Payment Options</h2>
-      <p>We offer multiple convenient ways to pay:</p>
-      <div class="payment-icons">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Venmo_Logo.png" alt="Venmo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Cash_App_Logo.png" alt="Cash App">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Chime_logo.svg" alt="Chime">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/OneFinance_logo.png" alt="One">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Square%2C_Inc._logo.svg" alt="Square">
-      </div>
-      <p>
-        Preferred: <strong>Venmo</strong> or <strong>Cash App</strong> (no processing fees).  
-        Credit cards accepted via <strong>Square</strong>. Financial assistance plans available upon request with a card on file.
-      </p>
-    </section>
+  <!-- Pay -->
+  <section id="pay" class="pay">
+    <h2>Pay deposit or balance</h2>
+    <p class="muted">Pay securely online via PayPal. You can use a debit/credit card without a PayPal account.</p>
+    <div class="card" style="text-align:center">
+      <h3>Pay with PayPal</h3>
+      <p class="muted">Click below to open our PayPal.Me page. Enter your deposit (50% of your quote) or the full balance.</p>
+      <a class="btn" href="https://paypal.me/YourHandle" target="_blank">Open PayPal payment page</a>
+      <p class="muted">Add amount to link (e.g. paypal.me/YourHandle/250) to prefill.</p>
+    </div>
+    <div class="cards" style="margin-top:1.5rem">
+      <div class="card"><h3>Cash App</h3><p class="muted">$YourCashtag</p></div>
+      <div class="card"><h3>Venmo</h3><p class="muted">@YourVenmo</p></div>
+      <div class="card"><h3>Chime / Zelle</h3><p class="muted">you@example.com</p></div>
+    </div>
+  </section>
 
-    <section id="contact" class="card">
-      <h2>Contact Us</h2>
-      <p>
-        📞 Call or Text: <strong>(Your Number Here)</strong><br>
-        ✉️ Email: <strong>(Your Email Here)</strong><br>
-        📍 Based in: United States – Nationwide Transport Available
-      </p>
-      <p>
-        We’d love to help guide your journey. Reach out today for a personalized quote.
-      </p>
-    </section>
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <h2>FAQ</h2>
+    <div class="cards">
+      <div class="card"><h3>What areas do you cover?</h3><p class="muted">Nationwide in the lower 48 states. Inquire for special routes.</p></div>
+      <div class="card"><h3>What's included in the price?</h3><p class="muted">Mileage, normal rest stops, water breaks. Tolls or special handling may be added.</p></div>
+      <div class="card"><h3>Refunds & rescheduling</h3><p class="muted">Deposits are transferable with 48+ hours notice. No-shows may forfeit deposit.</p></div>
+      <div class="card"><h3>Insurance & credentials</h3><p class="muted">Proof of insurance and USDA/APHIS compliance available on request.</p></div>
+    </div>
+  </section>
 
-  </div>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="cards">
+      <div class="card"><h3>Text / Call</h3><p class="muted">+1 (555) 555-1212</p></div>
+      <div class="card"><h3>Email</h3><p class="muted">hello@divinelyguidedtransport.com</p></div>
+      <div class="card"><h3>Social</h3><p class="muted">Instagram / Facebook: @divinelyguidedtransport</p></div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Divinely Guided Transport LLC. All rights reserved.</p>
+    <p>&copy; 2025 Divinely Guided Transport LLC — Licensed & Insured — Nationwide</p>
   </footer>
 
 </body>
