@@ -1,27 +1,58 @@
-:root{
-  --bg:#ffffff; --text:#1f2937; --muted:#6b7280; --brand:#3b82f6; --brand-2:#0ea5e9;
-  --card:#f8fafc; --border:#e5e7eb;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg)}
-a{color:var(--brand);text-decoration:none}
-a.button,button.button{
-  display:inline-block;padding:.8rem 1.1rem;border-radius:.75rem;border:1px solid var(--brand);
-  background:linear-gradient(180deg,var(--brand),var(--brand-2));color:#fff;font-weight:600
-}
-.container{max-width:1100px;margin:0 auto;padding:1.25rem}
-.nav{
-  position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);
-  background:rgba(255,255,255,.85);border-bottom:1px solid var(--border);z-index:20
-}
-.nav-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between}
-.brand{font-weight:800;letter-spacing:.2px}
-.brand small{font-weight:600;color:var(--muted)}
-.menu{display:flex;gap:1rem;flex-wrap:wrap}
-.hero{padding:3rem 0 2rem}
-.hero h1{font-size:clamp(1.6rem,2.5vw,2.2rem);margin:.25rem 0}
-.lead{color:var(--muted);max-width:62ch}
-.grid{display:grid;gap:1rem}
-.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.card{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divinely Guided Transport</title>
+  <meta name="description" content="Safe, reliable pet and package transport across the U.S.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-white to-blue-100 text-gray-800 font-sans">
+
+  <header class="bg-white shadow p-4">
+    <h1 class="text-3xl font-bold text-center text-blue-700">Divinely Guided Transport LLC</h1>
+    <p class="text-center text-sm text-gray-600">Nationwide pet and package transport | Spiritually protected. Logistically precise.</p>
+  </header>
+
+  <main class="p-6 max-w-3xl mx-auto">
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">Services & Pricing</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>🐾 $0.75 per mile — Multi-pet transports (shared)</li>
+        <li>🚚 $1.25 per mile — Solo pet transports (private)</li>
+        <li>💵 50% deposit due upfront, remainder on delivery</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">Accepted Payments</h2>
+      <p>We accept:</p>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Venmo</li>
+        <li>Cash App</li>
+        <li>Chime</li>
+        <li>ONE</li>
+        <li>PayPal</li>
+        <li>Credit/Debit via Square</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">Contact</h2>
+      <p>📱 <strong>Text or call:</strong> <a href="tel:+1YOURNUMBER" class="text-blue-700 underline">+1 (Your Number)</a></p>
+      <p>📧 <strong>Email:</strong> <a href="mailto:divinelyguidedtransport@gmail.com" class="text-blue-700 underline">divinelyguidedtransport@gmail.com</a></p>
+      <p>📍 <strong>Nationwide USA</strong></p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">Booking Info</h2>
+      <p>Send trip details and photos of your pet(s) to get a quote.</p>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center text-sm text-gray-500 py-4">
+    © 2025 Divinely Guided Transport LLC
+  </footer>
+
+</body>
+</html>
