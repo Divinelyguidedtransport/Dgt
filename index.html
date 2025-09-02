@@ -1,1 +1,361 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Divinely Guided Transport — Nationwide & International</title>
+  <meta name="description" content="Divinely Guided Transport LLC — Nationwide & international pet transport by ground & flights. Book dates, request a quote, and pay via PayPal, Cash App, Venmo, Chime, OneWalmart card, or credit/debit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;           /* slate-900 */
+      --card: #111827;         /* gray-900 */
+      --accent: #a3e635;       /* lime-400 */
+      --accent-2: #22d3ee;     /* cyan-400 */
+      --text: #e5e7eb;         /* gray-200 */
+      --muted: #94a3b8;        /* slate-400 */
+      --ring: rgba(163, 230, 53, .5);
+      --success: #34d399;
+      --danger: #f87171;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: radial-gradient(1200px 800px at 20% -10%, rgba(34,211,238,.15), transparent),
+                              radial-gradient(1000px 600px at 120% 20%, rgba(163,230,53,.10), transparent),
+                              var(--bg);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    .hero {
+      display: grid; gap: 20px; grid-template-columns: 1fr; align-items: center; margin-top: 6px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .logo {
+      width: 84px; height: 84px; border-radius: 20px; background: #0b1220; display: grid; place-items: center; overflow: hidden; border: 1px solid #1f2937; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .logo img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { margin: 0; font-size: clamp(1.3rem, 3.2vw, 2.1rem); font-weight: 700; letter-spacing: .3px; }
+    .subtitle { color: var(--muted); margin-top: 4px; font-weight: 400; }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .badge { padding: 8px 12px; border-radius: 999px; background: #0b1220; border: 1px solid #1f2937; color: #d1fae5; font-size: .9rem; }
+    .badge.cyan { color: #cffafe; }
+
+    .grid { display: grid; gap: 22px; grid-template-columns: 1fr; margin-top: 24px; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 1.2fr .8fr; } }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.02), transparent 30%), #0b1220;
+      border: 1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 15px 50px rgba(0,0,0,.25);
+    }
+    .card h2 { margin: 0 0 14px; font-size: 1.2rem; }
+    label { display:block; font-size:.95rem; margin: 10px 0 6px; color: #cbd5e1; }
+    input, select, textarea {
+      width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid #243043; background: #0b1326; color: var(--text);
+      outline: none; transition: border-color .2s, box-shadow .2s;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--ring); }
+    textarea { min-height: 120px; resize: vertical; }
+
+    .row { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 640px) { .row.two { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .row.three { grid-template-columns: 1fr 1fr 1fr; } }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 16px; border-radius: 12px;
+      border: 1px solid #2a394f; background: linear-gradient(180deg, rgba(163,230,53,.18), rgba(163,230,53,.12)); color: #132315; font-weight: 700;
+      text-decoration: none; cursor: pointer; user-select: none; transition: transform .08s ease, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 20px rgba(163,230,53,.18); }
+    .btn.alt { background: linear-gradient(180deg, rgba(34,211,238,.18), rgba(34,211,238,.12)); color: #0f2a2e; }
+    .btn.ghost { background: #0b1220; color: var(--text); border: 1px dashed #314055; }
+
+    .payments { display:grid; gap:10px; }
+    .payments .btn { width: 100%; }
+
+    .rates { display:flex; gap:10px; flex-wrap:wrap; margin: 12px 0 4px; }
+    .pill { padding: 10px 14px; border-radius: 999px; border: 1px solid #2a394f; background:#0b1220; }
+
+    .footer { margin: 28px 0 8px; color: var(--muted); font-size: .95rem; text-align:center; }
+    .contact { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top: 6px; }
+    .contact a { color: #e5e7eb; text-decoration: none; border-bottom: 1px dashed #334155; }
+    .success { color: var(--success); }
+    .danger { color: var(--danger); }
+
+    .mini { font-size: .9rem; color: var(--muted); margin-top: 6px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, #213148, transparent); margin: 16px 0; }
+
+    .list { margin: 10px 0 0 18px; }
+    .list li { margin: 6px 0; }
+
+    .note { font-size: .9rem; color: #cbd5e1; background: #0b1220; border: 1px dashed #334155; padding: 12px; border-radius: 12px; }
+
+    .hidden { display:none !important; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div>
+        <div class="brand">
+          <div class="logo">
+            <!-- Replace this src with your hosted logo URL -->
+            <img id="logo" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=300&auto=format&fit=crop" alt="Divinely Guided Transport logo" />
+          </div>
+          <div>
+            <h1>Divinely Guided Transport LLC</h1>
+            <div class="subtitle">Premium pet transport — trusted, compassionate, on time.</div>
+            <div class="badges">
+              <div class="badge">Nationwide & International</div>
+              <div class="badge cyan">Ground Transportation & Flights</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <!-- Booking / Quote -->
+      <div class="card">
+        <h2>Book Your Dates / Request a Quote</h2>
+        <form id="bookingForm">
+          <div class="row two">
+            <div>
+              <label for="startDate">Start date</label>
+              <input type="date" id="startDate" required />
+            </div>
+            <div>
+              <label for="endDate">End date</label>
+              <input type="date" id="endDate" required />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div>
+              <label for="pickup">Pickup City/State</label>
+              <input type="text" id="pickup" placeholder="e.g., Boise, ID" required />
+            </div>
+            <div>
+              <label for="dropoff">Drop‑off City/State</label>
+              <input type="text" id="dropoff" placeholder="e.g., Columbus, OH" required />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div>
+              <label for="rideType">Ride type</label>
+              <select id="rideType" required>
+                <option value="Shared">Shared Ride</option>
+                <option value="Solo">Solo Ride</option>
+              </select>
+            </div>
+            <div>
+              <label for="pets"># of pets</label>
+              <input type="number" id="pets" min="1" value="1" required />
+            </div>
+          </div>
+
+          <label for="details">Pet details & notes</label>
+          <textarea id="details" placeholder="Breed, age, special needs, ideal times, airline crate size, etc."></textarea>
+
+          <div class="rates">
+            <div class="pill">Rates: <strong>$75/mile (Shared)</strong></div>
+            <div class="pill"><strong>$125/mile (Solo)</strong></div>
+          </div>
+          <div class="mini">* Mileage is calculated door‑to‑door. Tolls, parking, flight/crate fees, and add‑ons (medication stops, extra handling) are billed at cost.</div>
+
+          <div class="divider"></div>
+          <div class="row two">
+            <button type="submit" class="btn">Create Booking Email</button>
+            <button type="button" id="whatsappBtn" class="btn alt">Send via WhatsApp</button>
+          </div>
+          <div id="formMsg" class="mini"></div>
+        </form>
+      </div>
+
+      <!-- Payments -->
+      <aside class="card">
+        <h2>Pay Securely</h2>
+        <div class="row two">
+          <div>
+            <label for="amount">Amount (USD)</label>
+            <input type="number" id="amount" min="1" step="0.01" placeholder="Enter amount" />
+          </div>
+          <div>
+            <label for="memo">Memo / Pet name</label>
+            <input type="text" id="memo" placeholder="e.g., Bella deposit" />
+          </div>
+        </div>
+        <div class="payments" style="margin-top:10px">
+          <button class="btn" data-pay="paypal">PayPal</button>
+          <button class="btn" data-pay="cashapp">Cash App</button>
+          <button class="btn" data-pay="venmo">Venmo</button>
+          <button class="btn" data-pay="chime">Chime</button>
+          <button class="btn ghost" data-pay="walmart">OneWalmart Card (manual)</button>
+          <button class="btn alt" data-pay="card">Credit/Debit Card</button>
+        </div>
+        <div class="mini">Handles: Venmo <strong>@DivinelyGT</strong> • Cash App <strong>$DivinelyGT</strong> • Chime <strong>DivinelyGT</strong> • PayPal <strong>divinelyguidedtransport@gmail.com</strong></div>
+        <div class="note" style="margin-top:12px">Tip: If a button doesn’t open your app automatically, you can send manually using the handle/email above. Credit/Debit uses a hosted checkout link (add yours in the code — see <code>CONFIG.cardLink</code>).</div>
+      </aside>
+    </section>
+
+    <section class="card" style="margin-top:22px">
+      <h2>What You’ll Need for Transport</h2>
+      <ul class="list">
+        <li>Leash</li>
+        <li>Collar</li>
+        <li>Food that your pet is used to</li>
+        <li>One gallon of water</li>
+        <li>Pet bedding or a familiar blanket</li>
+        <li>Optional: toys or comfort items</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <div>Questions? Text or call <a href="tel:+12403809239">(240) 380‑9239</a> • <a href="mailto:divinelyguidedtransport@gmail.com">divinelyguidedtransport@gmail.com</a></div>
+      <div class="contact">
+        <span>© <span id="yr"></span> Divinely Guided Transport LLC</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // ======== EASY SETTINGS (edit these) =========
+    const CONFIG = {
+      businessName: "Divinely Guided Transport LLC",
+      email: "divinelyguidedtransport@gmail.com",
+      phone: "+12403809239",
+      // Payment identifiers
+      paypalEmail: "divinelyguidedtransport@gmail.com",
+      cashTag: "DivinelyGT",      // Cash App: $DivinelyGT
+      venmoUser: "DivinelyGT",     // Venmo: @DivinelyGT
+      chimeHandle: "DivinelyGT",   // (display only)
+      // Optional hosted card link (Stripe/PayPal/Square). Replace with your real link when ready:
+      cardLink: "https://example.com/secure-card-checkout", // TODO: replace
+      // Optional PayPal.Me link (if you create one):
+      paypalMe: "", // e.g., https://www.paypal.me/DivinelyGuidedTransport
+    };
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // ======== BOOKING EMAIL / WHATSAPP =========
+    const form = document.getElementById('bookingForm');
+    const msg = document.getElementById('formMsg');
+    const waBtn = document.getElementById('whatsappBtn');
+
+    function buildSummary() {
+      const s = (id) => document.getElementById(id).value.trim();
+      const start = s('startDate');
+      const end = s('endDate');
+      const pickup = s('pickup');
+      const dropoff = s('dropoff');
+      const type = s('rideType');
+      const pets = s('pets');
+      const details = s('details');
+
+      return { start, end, pickup, dropoff, type, pets, details };
+    }
+
+    function formatEmailBody(data) {
+      return `Booking/Quote Request — ${CONFIG.businessName}%0D%0A%0D%0A` +
+             `Dates: ${data.start} to ${data.end}%0D%0A` +
+             `From: ${data.pickup}%0D%0A` +
+             `To: ${data.dropoff}%0D%0A` +
+             `Ride Type: ${data.type}%0D%0A` +
+             `# of Pets: ${data.pets}%0D%0A%0D%0A` +
+             `Pet Details / Notes:%0D%0A${(data.details||'(none)').replaceAll('\n','%0D%0A')}%0D%0A%0D%0A` +
+             `Rates acknowledged: $75/mile (Shared) or $125/mile (Solo).`;
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = buildSummary();
+      // basic guard
+      if (!data.start || !data.end || !data.pickup || !data.dropoff) {
+        msg.textContent = 'Please complete all required fields.';
+        msg.className = 'mini danger';
+        return;
+      }
+      const subject = encodeURIComponent('Booking / Quote Request');
+      const body = formatEmailBody(data);
+      const mailto = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+      // Copy a plain-text version to clipboard for convenience
+      const plain = decodeURIComponent(body).replaceAll('%0D%0A','\n');
+      navigator.clipboard?.writeText(plain).catch(()=>{});
+      window.location.href = mailto;
+      msg.textContent = 'Opening your email app with details. (We also copied the request to your clipboard.)';
+      msg.className = 'mini success';
+    });
+
+    waBtn.addEventListener('click', () => {
+      const data = buildSummary();
+      const text = decodeURIComponent(formatEmailBody(data)).replaceAll('%0D%0A','\n');
+      const wa = `https://wa.me/${CONFIG.phone.replace(/\D/g,'')}?text=${encodeURIComponent(text)}`;
+      window.open(wa, '_blank');
+    });
+
+    // ======== PAYMENTS =========
+    function openPayment(kind) {
+      const amount = document.getElementById('amount').value.trim();
+      const memo = document.getElementById('memo').value.trim();
+      const amt = amount ? Number(amount).toFixed(2) : '';
+
+      switch (kind) {
+        case 'paypal': {
+          if (CONFIG.paypalMe) {
+            // PayPal.Me supports amount in path
+            const url = `${CONFIG.paypalMe}${amt ? '/' + amt : ''}`;
+            window.open(url, '_blank');
+          } else {
+            // Fallback to classic send page
+            const url = `https://www.paypal.com/myaccount/transfer/send/homepage?recipient=${encodeURIComponent(CONFIG.paypalEmail)}${amt?`&amount=${amt}`:''}`;
+            window.open(url, '_blank');
+          }
+          break;
+        }
+        case 'cashapp': {
+          const url = `https://cash.app/$${CONFIG.cashTag}${amt ? `/${amt}` : ''}`;
+          window.open(url, '_blank');
+          break;
+        }
+        case 'venmo': {
+          // Try app deep link first, otherwise web profile
+          const app = `venmo://paycharge?txn=pay&recipients=${encodeURIComponent(CONFIG.venmoUser)}${amt?`&amount=${amt}`:''}${memo?`&note=${encodeURIComponent(memo)}`:''}`;
+          // Attempt app link (may be blocked by browser); also open web as fallback shortly after
+          const timer = setTimeout(()=>{
+            const web = `https://venmo.com/u/${CONFIG.venmoUser}`;
+            window.open(web, '_blank');
+          }, 800);
+          window.location.href = app;
+          setTimeout(()=>clearTimeout(timer), 1200);
+          break;
+        }
+        case 'chime': {
+          alert(`Open Chime and send to: ${CONFIG.chimeHandle}\nAmount: ${amt||'(enter)'}\nMemo: ${memo||'(optional)'}\n\n(Chime does not provide public payment links, so this is manual.)`);
+          break;
+        }
+        case 'walmart': {
+          alert('To pay with OneWalmart card: please text me the last 4 digits for verification, then I\'ll send a secure payment request.');
+          break;
+        }
+        case 'card': {
+          if (!CONFIG.cardLink || CONFIG.cardLink.includes('example.com')) {
+            alert('Card payments: Add your hosted checkout link in CONFIG.cardLink inside the code.');
+          } else {
+            window.open(CONFIG.cardLink, '_blank');
+          }
+          break;
+        }
+      }
+    }
+
+    document.querySelectorAll('[data-pay]')
+      .forEach(btn => btn.addEventListener('click', () => openPayment(btn.dataset.pay)));
+  </script>
+</body>
+</html>
